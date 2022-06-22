@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Our Shop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- slim select -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.0/slimselect.min.css" rel="stylesheet">
+    </link>
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- custome CSS  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <!-- side nav -->
+    <section class="sidenav">
+        <div class="sidenav__container">
+            <div class="sidenav__logo">
+                <img src="./assets/img/logo.png" alt="">
+            </div>
+            <ul>
+                <li class="sidenav__item">
+                    <a href="#url">Home</a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="#url">Shop</a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="#url">Course</a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="#url">Blog</a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="#url">Works</a>
+                </li>
+                <li class="sidenav__item">
+                    <a href="#url">Element</a>
+                </li>
+            </ul>
+            <div class="sidenav__contact">
+                <div class="sidenav__contact-phone">
+                    <a href="tel:+840976283273" class="sidenav__contact-phone-link">
+                        <i class="fa fa-phone"></i>
+                        (+84) 976 283 273
+                    </a>
+                </div>
+                <div class="sidenav__contact-social">
+                    <a href="#url" class="sidenav__contact-social-link">
+                        <i class="fab fa-opencart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- header -->
+    <header class="header">
+        <div class="grid">
+            <div class="header__container">
+                <div>
+                    <div class="header__logo ">
+                        <div class="menuToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <img src="./assets/img/logo.png" class="header__logo-img wow animate__animated animate__fadeIn">
+                    </div>
+                </div>
+                <div class="header__nav ">
+                    <nav>
+                        <ul class="navbar">
+                            <li class="navbar__item">
+                                <a class="nav-link" href="#url">Home</a>
+                            </li>
+                            <li class="navbar__item ">
+                                <a class="nav-link active" href="#url">Shop</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="nav-link" href="#url">News</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="nav-link" href="#url">Blog</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="nav-link" href="#url">Works</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="nav-link" href="#url">Elements</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__contact">
+                        <a href="tel:+840976283273" class="header__contact-phone">
+                            <i class="fa fa-phone"></i>
+                            (+84) 976 283 273
+                        </a>
+
+
+                        <!-- Trigger/Open The Modal -->
+                        <span id="showCart" class="cart-icon" data-toggle="modal" data-target="#cartModal">
+                            <i class="fab fa-opencart cartIconTotal">
+                                <span id="cartTotalQty" class="inactive"></span>
+                            </i>
+                        </span>
+                    </div>
+                </div>
+                <!-- The Modal Cart -->
+                <div class="modal fade" id="cartModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <h5 id="titleCartList" class="modal-title" id="exampleModalLabel">
+                                    Your shopping cart
+                                </h5>
+                                <button id="closeCartList" type="button" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-image">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Qty</th>
+                                            <th scope="col">Total</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyInCart">
+                                    </tbody>
+                                </table>
+                                <div class="d-flex justify-content-end">
+                                    <h5>Total: <span id="paysum" class="price text-success"></span></h5>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-between">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button id="btnCheckOut" data-toggle="modal" data-target="#myModalCheckOut"
+                                    type="button" class="btn btn-success" onclick="checkOut()">GO TO
+                                    CHECKOUT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The modal confirmOrder -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="phoneNameModals"></h4>
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Price</th>
+                                            <th>Screen</th>
+                                            <th>Back Camera</th>
+                                            <th>Front Camera</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyModalReview">
+                                        <tr>
+                                            <td id="phonePriceModals"></td>
+                                            <td id="phoneScreenModals"></td>
+                                            <td id="phoneBackModals"></td>
+                                            <td id="phoneFontModals"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="desc text-left" id="phoneDescModals"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Modal -->
+                <div class="modal fade" id="myModalCheckOut">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <h2 class="text-center">Order Confirmation</h2>
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Quantity</th>
+                                            <th>Price in Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="contentPurchase"></tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex">
+                                <h5 class="ml-3">Total: <span id="paysumPurchase" class="price text-success"></span>
+                                </h5>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-between">
+                                <button id="closeCheckOut" type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                                <button data-toggle="modal" data-target="#myModalPurchase" type="button"
+                                    class="btn btn-success" onclick="purChase()">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase Modal -->
+                <div class="modal fade" id="myModalPurchase">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button id="closeContinueShopping" type="button" class="close"
+                                    data-dismiss="modal">×</button>
+                            </div>
+                            <div class="modal-body text-success">
+                                <h4>Your order has been placed successfully !!!</h4>
+                                <h4 id="orderNum"></h4>
+                                <h4>Thank you so much</h4>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-between">
+                                <button type="button" class="btn btn-success" onclick="confirmOrder()">CONTINUE
+                                    SHOPPING</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- about us -->
+    <section class="about">
+        <div class="grid">
+            <div class="about__container">
+                <div class="about__content-wrap">
+                    <div class="about__item wow animate__animated animate__fadeInLeft ">
+                        <div class="about__item-content">
+                            <p class="about__item-sub-title">
+                                Shop With Us
+                            </p>
+                            <h1 class="about__item-title">
+                                Our Products
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="about__item wow animate__animated animate__fadeIn">
+                        <div class="about__item-content">
+                            <img src="./assets/img/hero__x15fcac9fw2q_large.png" class="about__iem-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="collection">
+        <!-- Select box -->
+        <div class="form-group ml-5 pt-5 selectedType">
+            <select class="form-control" id="selectedType" onchange="typePhone()">
+                <option value="All">Chọn loại smart phone</option>
+                <option value="Iphone">Iphone</option>
+                <option value="Samsung">Samsung</option>
+            </select>
+        </div>
+        <!-- End Select box -->
+
+        <!-- Product -->
+        <div class="collection__content container-fluid">
+            <div class="lds-spinner" id="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="showUI" class="row justify-content-center">
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="grid">
+            <div class="footer__container">
+                <div class="footer__content-wrap">
+                    <div class="footer__item wow animate__animated animate__fadeInUp">
+                        <div class="footer__item-content">
+                            <h2 class="footer__item-title">
+                                Contact us
+                            </h2>
+                            <p>
+                                <i class="ti ti-map-alt"></i>
+                                Franklin St, Greenpoint Ave
+                            </p>
+                            <p>
+                                <i class="ti ti-mobile"></i>
+                                +84 976 283 273
+                            </p>
+                            <p>
+                                <i class="ti ti-alarm-clock"></i>
+                                Monday - Friday: 8 AM - 5 PM
+                            </p>
+                            <div class="footer__item-social">
+                                <a href="#url">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#url">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#url">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#url">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__item wow animate__animated animate__fadeInUp">
+                        <div class="footer__item-content">
+                            <h2 class="footer__item-title">
+                                Quick Links
+                            </h2>
+                            <p>
+                                <a href="#url">Home</a>
+                            </p>
+                            <p>
+                                <a href="#url">News</a>
+                            </p>
+                            <p>
+                                <a href="#url">Schedule</a>
+                            </p>
+                            <p>
+                                <a href="#url">Blog</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer__item wow animate__animated animate__fadeInUp">
+                        <div class="footer__item-content">
+                            <h2 class="footer__item-title">
+                                About
+                            </h2>
+                            <p>
+                                <a href="#url">About us</a>
+                            </p>
+                            <p>
+                                <a href="#url">Event</a>
+                            </p>
+                            <p>
+                                <a href="#url">Get Quote</a>
+                            </p>
+                            <p>
+                                <a href="#url">Contact</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer__item wow animate__animated animate__fadeInUp">
+                        <div class="footer__item-content">
+                            <h2 class="footer__item-title">
+                                Newsletter
+                            </h2>
+                            <form action="" class="footer__item-form">
+                                <input type="email" name="email" placeholder="Your email">
+                                <a href="">SUBCRIBE</a>
+                                <!-- <button>SUBCRIBE</button> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Axios  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Wow  -->
+    <script src="./assets/wowjs/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- layout js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.0/slimselect.min.js"></script>
+    <script src="./assets/layoutjs/slimSelect.js"></script>
+    <script src="./assets/layoutjs/index.js"></script>
+
+
+    <script src="./app/services/index.js"></script>
+    <script src="./app/models/ProductList.js"></script>
+    <script src="./app/models/Product.js"></script>
+    <script src="./app/models/CartList.js"></script>
+    <script src="./app/models/CartItem.js"></script>
+    <script src="./app/controllers/main.js"></script>
+</body>
+
+</html>

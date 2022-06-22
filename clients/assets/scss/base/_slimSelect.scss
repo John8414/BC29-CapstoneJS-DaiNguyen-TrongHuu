@@ -1,0 +1,41 @@
+.ss-main {
+  position: initial;
+    .ss-single-selected {
+      border: none;
+      padding: 0;
+      margin-left: $m-4;
+      width: initial;
+
+      .placeholder {
+        font-size: $fs-1;
+      }
+    }
+
+    .ss-content {
+      z-index: 99;
+      top: calc(100%);
+      left: -1px;
+      width: calc(100% + 2px);
+
+      .ss-search.ss-hide,.ss-search.ss-hide input {
+        visibility: hidden;
+      }
+      .ss-list {
+        padding: 12px 0;
+
+        .ss-option {
+          padding: 5px 46px;
+          font-size: $fs-1;
+          &:hover {
+            background-color: initial;
+            color: $pink-1;
+          }
+        }
+        
+        .ss-option.ss-disabled{
+          cursor: pointer;
+          color: $pink-1;
+        }
+      }
+    }
+}

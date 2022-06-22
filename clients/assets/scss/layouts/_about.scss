@@ -1,0 +1,61 @@
+.about {
+    position: relative;
+    padding-top: $pd-7;
+    margin-top: 80px;
+    .about__content-wrap {
+        @include flexGrid(wrap,$m-0,$m-0);
+
+        align-items: center;
+        .about__item {
+            @include flexItem(2,$m-0,$m-0);
+
+            @include mediaQuery($sm) {
+                @include flexItem(1,$m-0,$m-0);
+            }
+            // @include mediaQuery($xs) {
+            //     @include flexItem(1,$m-0,$m-0);
+            // }
+            .about__item-sub-title {
+                @include textStyle($fs-4,$fw-4,$lh-0,$pink);
+            }
+            .about__item-title {
+                @include textStyle($fs-8,$fw-4,$lh-0,$black);
+
+                @include mediaQuery($lg) {
+                    font-size: $fs-xs-7;
+                }
+
+                @include mediaQuery($sm) {
+                    font-size: $fs-8;
+                }
+
+                @include mediaQuery($xs) {
+                    font-size: $fs-xs-7;
+                }
+            }
+            .about__iem-img {
+                @include img(100%,initial);
+
+                @include mediaQuery($sm) {
+                    @include img(80%,initial);
+                }
+
+                @include mediaQuery($xs) {
+                    @include img(100%,initial);
+                }
+            }
+        }
+    }
+
+    .about__img-background {
+        @include position(absolute,-1,initial,initial,-1px,0);
+        width: 100%;
+        img {
+            @include img(100%,18rem);
+
+            @include mediaQuery($xs) {
+                height: 5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.team {
+  position: relative;
+  padding-top: $pd-7;
+  background-color: $pink-2;
+
+  .m-8 {
+    margin: $m-8;
+  }
+}
+
+.team__list {
+  position: relative;
+  z-index: 1;
+  @include flexGrid(wrap, $m-9, $m-9);
+
+  .team__item {
+    @include flexItem(4, $m-9, $m-9);
+
+    @include mediaQuery($sm) {
+      @include flexItem(2, $m-9, $m-9);
+    }
+
+    @include mediaQuery($xs) {
+      @include flexItem(1, $m-9, $m-9);
+    }
+
+    border-radius: $br-2;
+    background-color: $light;
+    overflow: hidden;
+    transition: all 0.5s linear;
+
+    &:hover {
+      box-shadow: 0 30px 30px -10px $black-2;
+    }
+
+    .team__item-img {
+      overflow: hidden;
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      img {
+        @include img(100%, 100%);
+        transition: all 0.5s linear;
+      }
+    }
+
+    .team__item-info {
+      padding: $pd-6 $pd-5;
+      text-align: center;
+
+      .team__item-country {
+        @include textStyle($fs-1, $fw-3, initial, $pink-1);
+        margin-bottom: $m-2;
+      }
+
+      .team__item-name {
+        @include textStyle($fs-6, $fw-4, initial, $black);
+        margin-bottom: $m-5;
+      }
+
+      .team__item-description {
+        @include textStyle($fs-3, initial, $lh-3, $black-1);
+      }
+    }
+  }
+
+  .team__item:nth-child(1),
+  .team__item:nth-child(5) {
+    @include animate-1($aniName-1, $delay-1 )
+  }
+
+  .team__item:nth-child(2),
+  .team__item:nth-child(6) {
+    @include animate-1($aniName-1, $delay-2 )
+  }
+
+  .team__item:nth-child(3),
+  .team__item:nth-child(7) {
+    @include animate-1($aniName-1, $delay-3 )
+  }
+
+  .team__item:nth-child(4),
+  .team__item:nth-child(8) {
+    @include animate-1($aniName-1, $delay-4 )
+  }
+}

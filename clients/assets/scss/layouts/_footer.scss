@@ -1,0 +1,153 @@
+.footer {
+  padding: 16rem 0;
+  background-color: $pink;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(../../assets/img/footer_background.jpg) left bottom / 105% 80% no-repeat;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+
+    @include mediaQuery($lg) {
+      background: url(../../assets/img/footer_background.jpg) left bottom / 100% 30rem no-repeat;
+    }
+
+    @include mediaQuery($sm) {
+      background: url(../../assets/img/footer_background.jpg) left bottom / 100% 25rem no-repeat;
+    }
+
+    @include mediaQuery($xs) {
+      background: url(../../assets/img/footer_background.jpg) left bottom / 100% 18rem no-repeat;
+    }
+  }
+
+  .footer__content-wrap {
+    @include flexGrid(wrap, $m-10, $m-10);
+
+    .footer__item {
+      @include flexItem(4, $m-10, $m-10);
+
+      @include mediaQuery($sm) {
+        @include flexItem(2, $m-10, $m-10);
+      }
+
+      @include mediaQuery($xs) {
+        @include flexItem(1, $m-10, $m-10);
+      }
+
+      .footer__item-title {
+        @include textStyle($fs-6, $fw-4, $lh-0, $light);
+        margin-bottom: $m-6;
+      }
+
+      p {
+        @include textStyle($fs-1, $fw-0, $lh-5, $light);
+      }
+
+      i {
+        margin-right: $m-2;
+        font-size: $fs-3;
+      }
+
+      a {
+        color: $light;
+        transition: all 0.3s linear;
+
+        &:hover {
+          color: $light-1;
+        }
+      }
+
+      .footer__item-social {
+        margin-top: $m-4;
+
+        a {
+          font-size: $fs-3;
+          color: $light;
+          transition: all 0.3s linear;
+
+          &:hover {
+            color: black;
+          }
+
+          +a {
+            margin-left: $m-3;
+          }
+        }
+      }
+
+      .footer__item-form {
+        input {
+          width: 100%;
+          text-align: center;
+          color: $light;
+          background-color: $pink;
+          border: 1px solid $light-2;
+          height: 5rem;
+          border-radius: $br-5;
+          outline: none;
+
+          transition: $transit-1;
+
+          &::placeholder {
+            color: $light;
+          }
+
+          &:focus {
+            border: 1px solid rgba(255, 255, 255, 1);
+          }
+
+          &:focus-visible {
+            outline: none;
+          }
+        }
+
+        a {
+          @extend .mybtn;
+          @extend .mybtn.mybtn-primary;
+          padding: 1.5rem 2rem;
+          margin-top: $m-3;
+          width: 100%;
+          box-shadow: 0 0 0 4.8rem $light inset;
+          color: $black;
+
+          &:hover {
+            color: $light;
+            background-color: $pink;
+            box-shadow: 0 0 0 1px $light inset;
+          }
+        }
+      }
+    }
+
+    .footer__item:nth-child(1) {
+      @include animate-1($aniName-1, $delay-1);
+    }
+
+    .footer__item:nth-child(2) {
+      @include animate-1($aniName-1, $delay-2);
+
+      p {
+        border-bottom: 1px solid $black-2;
+      }
+
+    }
+
+    .footer__item:nth-child(3) {
+      @include animate-1($aniName-1, $delay-3);
+
+      p {
+        border-bottom: 1px solid $black-2;
+      }
+    }
+
+    .footer__item:nth-child(4) {
+      @include animate-1($aniName-1, $delay-4);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    border-radius: 2rem;
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: $pd-5;
+    border: 1px solid #888;
+    width: 80%;
+
+    .cart__head {
+        font-size: $fs-7;
+        color: $pink-1 ;
+        text-align: center;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: $black-1;
+    font-size: $fs-6;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: $pink-1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.productDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: $fs-5;
+    margin-top: $m-3 ;
+
+    #selItemImg {
+        width: 2em;
+    }
+
+    .SLSP {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.modal-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

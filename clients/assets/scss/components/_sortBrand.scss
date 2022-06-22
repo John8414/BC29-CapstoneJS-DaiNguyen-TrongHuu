@@ -1,0 +1,23 @@
+.selFrom {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1em;
+
+    .sortBrands-label {
+        font-size: $fs-2;
+        padding: $pd-3 ;
+    }
+
+    .sortBrands {
+        font-size: $fs-2 ;
+        padding: $pd-1 ;
+        border-radius: $br-3 ;
+        border: $pink-1;
+
+        &:focus-visible {
+            outline-color: $pink-2;
+        }
+    }
+}

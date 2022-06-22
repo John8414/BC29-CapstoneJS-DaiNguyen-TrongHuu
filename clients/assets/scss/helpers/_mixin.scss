@@ -1,0 +1,80 @@
+// display flex
+@mixin flex($alignItem, $justifyContent) {
+    display: flex;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+}
+
+@mixin flexGrid ($wrap, $columnSpace, $rowSpace) {
+    display: flex;
+    flex-wrap: $wrap;
+    margin-left: calc(-1 * #{ $columnSpace });
+    margin-top: calc(-1 * #{ $rowSpace });
+}
+
+@mixin flexItem ($column, $columnSpace, $rowSpace) {
+    width: calc(100%/#{ $column } - #{ $columnSpace });
+    margin-left: $columnSpace;
+    margin-top: $rowSpace;
+}
+
+@mixin textStyle($fontSize, $fontWeight, $lineHeight, $color) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $color;
+}
+
+@mixin img($width, $height) {
+    width: $width ;
+    height: $height;
+    display: block;
+}
+
+@mixin position($position, $zIndex, $top, $right, $bottom, $left) {
+    position: $position;
+    z-index: $zIndex;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin mediaQuery ($type) {
+    @if $type ==$xs {
+        @media screen and (max-width: $xs) {
+            @content;
+        }
+    }
+
+    @else if $type ==$sm {
+        @media screen and (max-width: $sm) {
+            @content;
+        }
+    }
+
+    @else if $type ==$md {
+        @media screen and (max-width: $md) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (max-width: $lg) {
+            @content;
+        }
+    }
+}
+
+//animate
+@mixin animate-1 ($aniName, $delay) {
+    animation-name: $aniName;
+    // animation: 800ms ease-in-out 0s normal none 1 running $aniName;
+    // animation-fill-mode: none;
+    animation-duration: 800ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: $delay;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+}

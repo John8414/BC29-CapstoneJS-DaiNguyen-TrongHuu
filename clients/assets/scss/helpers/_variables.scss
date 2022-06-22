@@ -1,0 +1,94 @@
+// color
+$pink: #ae383b;
+$pink-1: #ea4e4f;
+$pink-2: #ef9899;
+$black: #000;
+$black-1: rgba(0, 0, 0, 0.8);
+$black-2: rgba(0, 0, 0, 0.2);
+$light: #fff;
+$light-1: rgba(255, 255, 255, 0.6);
+$light-2: rgba(255, 255, 255, 0.4);
+$gray-1: #aaa;
+
+// padding
+
+$pd-1: 0.4em;
+$pd-2: 0.8em;
+$pd-3: 1.2em;
+$pd-4: 1.6em;
+$pd-5: 2em;
+$pd-6: 3em;
+$pd-7: 4em;
+$pd-8: 5em;
+$pd-9: 6em;
+$pd-10: 8em;
+
+// margin
+
+$m-0: 0em;
+$m-1: 0.4em;
+$m-2: 0.8em;
+$m-3: 1.2em;
+$m-4: 1.6em;
+$m-5: 2em;
+$m-6: 2.4em;
+$m-7: 2.8em;
+$m-8: 3.2em;
+$m-9: 4em;
+$m-10: 6em;
+
+// font size
+
+$fs-0: initial;
+$fs-1: 1.3rem;
+$fs-2: 1.4rem;
+$fs-3: 1.5rem;
+$fs-4: 1.6rem;
+$fs-5: 1.8rem;
+$fs-6: 2.4rem;
+$fs-7: 4rem;
+$fs-xs-7 : 4.8rem;
+$fs-8: 5rem;
+
+// font weight
+
+$fw-0: initial;
+$fw-1: 400;
+$fw-2: 500;
+$fw-3: 600;
+$fw-4: 700;
+$fw-5: 800;
+
+// line height
+
+$lh-0: initial;
+$lh-1: 1rem;
+$lh-2: 2rem;
+$lh-3: 3rem;
+$lh-4: 3.2rem;
+$lh-5: 4rem;
+
+// border-radius
+
+$br-1: 0.5rem;
+$br-2: 1rem;
+$br-3: 1.4rem;
+$br-4: 2rem;
+$br-5: 3rem;
+
+// media query
+
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+//transit
+$transit-1: all 300ms ease;
+
+//anime
+$aniName-1: fadeIn;
+$delay-1: .5s;
+$delay-2: 1s;
+$delay-3: 1.5s;
+$delay-4: 2s;

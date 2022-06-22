@@ -1,0 +1,71 @@
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    height: 100vh;
+    width: 300px;
+    transform: translateX(-300px);
+    // margin-left: -300px;
+    background-color: $light;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+
+    .sidenav__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 $pd-5;
+        height: 100%;
+
+        .sidenav__logo {
+            margin-bottom: $m-9;
+        }
+
+        .sidenav__item {
+            a {
+                font-size: $fs-2;
+                color: $black;
+            }
+
+            +.sidenav__item {
+                margin-top: $m-5;
+            }
+        }
+
+    }
+}
+
+.sidenav.open {
+    transform: translateX(0px);
+    box-shadow: 0 0 10px $black-2;
+    // position: fixed;
+    // height: 100vh;
+    // margin-left: 0;
+}
+
+.sidenav__contact {
+    .sidenav__contact-phone {
+        margin-top: $m-10;
+
+        .sidenav__contact-phone-link {
+            @extend .mybtn;
+            @extend .mybtn.mybtn-primary;
+        }
+    }
+
+    .sidenav__contact-social {
+        margin-top: $m-3;
+        text-align: center;
+
+        .sidenav__contact-social-link {
+            font-size: $fs-2;
+            color: $black;
+
+            +.sidenav__contact-social-link {
+                margin-left: $m-2;
+            }
+        }
+
+    }
+}

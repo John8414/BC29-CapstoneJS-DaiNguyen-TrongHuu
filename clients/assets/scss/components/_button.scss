@@ -1,0 +1,14 @@
+.btnCart {
+    font-size: $fs-3;
+    border: solid 1px white;
+    padding: $pd-2;
+    color: $black-1;
+    cursor: pointer;
+    transition: $transit-1;
+    border-radius: $br-2 ;
+
+    &:hover {
+        border: solid 1px $pink-1;
+        color: $pink-1;
+    }
+}
