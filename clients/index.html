@@ -119,9 +119,9 @@
 
 
                         <!-- Trigger/Open The Modal -->
-                        <span id="showCart" class="cart-icon" data-toggle="modal" data-target="#cartModal">
-                            <i class="fab fa-opencart cartIconTotal">
-                                <span id="cartTotalQty" class="inactive"></span>
+                        <span id="showCart" class="cart-icon btnCart" data-toggle="modal" data-target="#cartModal">
+                            <i class="fab fa-opencart cartIconTotal fa-2x ">
+                                <sup><span id="cartTotalQty" class="inactive "></span></sup>
                             </i>
                         </span>
                     </div>
@@ -237,6 +237,7 @@
                     </div>
                 </div>
 
+
                 <!-- Purchase Modal -->
                 <div class="modal fade" id="myModalPurchase">
                     <div class="modal-dialog">
@@ -289,8 +290,8 @@
 
     <section class="collection">
         <!-- Select box -->
-        <div class="form-group ml-5 pt-5 selectedType">
-            <select class="form-control" id="selectedType" onchange="typePhone()">
+        <div class="form-group selectedType container w-25">
+            <select class="form-control  bg-light" id="selectedType" onchange="typePhone()">
                 <option value="All">Chọn loại smart phone</option>
                 <option value="Iphone">Iphone</option>
                 <option value="Samsung">Samsung</option>
@@ -314,8 +315,9 @@
                 <div></div>
                 <div></div>
             </div>
-            <div id="showUI" class="row justify-content-center">
-
+            <div class="container">
+                <div id="showUI" class="row justify-content-center">
+                </div>
             </div>
 
         </div>

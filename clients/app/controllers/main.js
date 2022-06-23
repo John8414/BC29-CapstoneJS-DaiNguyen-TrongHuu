@@ -10,11 +10,11 @@ const getProductLstApi = () => {
     .getProductList()
     .then((result) => {
       tempProductList(result.data);
-      getEle("loader").style.display = "none"
+      getEle("loader").style.display = "none";
     })
     .catch((error) => {
       console.log(error);
-      getEle("loader").style.display = "none"
+      getEle("loader").style.display = "none";
     });
 };
 
@@ -52,30 +52,31 @@ const renderProducListByApi = (data) => {
   let content = "";
   data.forEach((product) => {
     content += `
-        <div class="col-md-2 mt-1 cart_item">
+        <div class=" my-3 cart_item col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="card text-center">
                         <div class="card-img">
                             <img src="./assets/img/${product.img}" class="img-fluid phoneImg" alt="${product.img}">
-                            <span class="phoneId">${product.id}</span>
-                            <div class="card-cart d-flex">
-                                <button type="button" class="btn-card-detail" data-toggle="modal"
-                                    data-target="#myModal" onclick="reviewProduct(${product.id})">Reviews</button>
-                                <button type="button" class="btn-card-cart" onclick="addToCart(event)" data-action="${product.id}">Add to Cart</button> 
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title mb-0 phoneName">${product.name}</h4>
-                            <p class="card-text mb-0">$<span class = "phonePrice">${product.price}</span></p>
-                            <p class="card-star mb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                            <span class="phoneId text-success"> ${product.id} </span>
+            <div class="card-cart d-flex  justify-content-around">
+                <button type="button" class="btn-card-detail btn btn-success" data-toggle="modal"
+                    data-target="#myModal" onclick="reviewProduct(${product.id})">Preview Info</button>
+                <button type="button" class="btn-card-cart btn btn-warning" onclick="addToCart(event)"
+                    data-action="${product.id}">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title my-3 phoneName">${product.name}</h4>
+            <p class="card-text my-3"> <sup class="text-warning"><i class="fa-2x fas fa-dollar-sign"></i></sup><span class="phonePrice">${product.price}</span></p>
+            <p class="card-star mb-2">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+            </p>
+        </div>
+    </div>
+</div>
         `;
   });
   getEle("showUI").innerHTML = content;
@@ -259,6 +260,7 @@ removeItem = (id) => {
   if (cartList.arrCartList.length == 0) {
     getEle("closeCartList").click();
     getEle("cartTotalQty").classList.add("inactive");
+    location.reload();
   }
   renderCartList();
   renderCartNum();
@@ -268,17 +270,11 @@ removeItem = (id) => {
 checkQty = (event) => {
   const cartItemDom = event.target.closest("tr");
   const cartItemQty = cartItemDom.querySelector(".phoneQty").value * 1;
-  if (cartItemQty == 0) {
-    getEle("btnCloseCartListITem").click();
-  } else {
-    const cartItem = getFormValue(event);
-    cartList.updateItem(cartItem);
-    renderCartList();
-    renderCartNum();
-  }
+  const cartItem = getFormValue(event);
+  cartList.updateItem(cartItem);
+  renderCartList();
+  renderCartNum();
 };
-
-// check out cart list
 checkOut = () => {
   getEle("closeCartList").click();
   let contentHTML = "";
@@ -314,5 +310,5 @@ confirmOrder = () => {
   localStorage.removeItem("CART_LIST");
   getEle("closeContinueShopping").click();
   getEle("cartTotalQty").classList.add("inactive");
+  location.reload();
 };
-
