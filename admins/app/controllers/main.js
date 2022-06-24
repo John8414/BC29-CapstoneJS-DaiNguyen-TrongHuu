@@ -79,7 +79,8 @@ const getProductFormValue = (isEdit, id) => {
     isValid &= valid.kiemTraRong(tenSP, "tenError", "(*) Vui lòng nhập tên sản phẩm");
     // kiểm tra đơn giá không được trống và > 0
     isValid &= valid.kiemTraRong(donGia, "donGiaError", "(*) Vui lòng nhập đơn giá") &&
-        valid.kiemTraSoDuong(donGia, "donGiaError", "(*) Đơn giá phải lớn hơn 0");
+        valid.kiemTraSoDuong(donGia, "donGiaError", "(*) Đơn giá phải lớn hơn 0") &&
+        valid.kiemTraLaSo(donGia, "donGiaError", "(*) nhập số, không được nhập ký tự");
     // kiểm tra màn hình không được trống
     isValid &= valid.kiemTraRong(manHinh, "manHinhError", "(*) Vui lòng nhập thông tin màn hình");
     // kiểm tra camera trước không được trống
@@ -145,7 +146,7 @@ getProduct = (id) => {
             getEle("hAnh").value = product.img;
             getEle("moTa").value = product.desc;
             getEle("loaiSP").value = product.type;
-            var btnUpdate = `<button class="btn btn-success" onclick="editProduct(${product.id})">Sửa</button>`;
+            var btnUpdate = `<button class="btn btn-success" onclick="editProduct(${product.id})">Update</button>`;
             document.getElementsByClassName("modal-footer")[0].innerHTML = btnUpdate;
         })
         .catch((error) => {
